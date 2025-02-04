@@ -1,0 +1,258 @@
+/* Template styling */
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  background: url('../images/dark-linen.png') repeat;
+  font-family: 'Roboto', sans-serif;
+}
+
+div#app {
+  display: grid;
+  max-width: 1400px;
+  margin: 0 auto;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    'header header header'
+    'menu menu menu'
+    'container container container'
+    'footer footer footer'
+  ;
+  min-height: 100vh;
+}
+
+header {
+  grid-area: header;
+  height: 200px;
+  background: url('../images/banner-top.png');
+}
+
+nav {
+  grid-area: menu;
+  height: 60px;
+  background: url('../images//banner-bottom.png');
+  font-size: 1.75em;
+  line-height: 60px;
+  padding: 20px;
+  color: white;
+  display: flex;
+}
+
+nav a {
+  color: rgb(95, 191, 255);
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  color: rgb(198, 115, 247);
+}
+
+#container {
+  grid-area: container;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  color: white;
+}
+
+footer {
+  grid-area: footer;
+  padding: 10px;
+  text-align: center;
+  color: #ccc;
+}
+
+.hidden {
+  display: none;
+}
+
+a.active {
+  color: white;
+  font-weight: bold;
+}
+
+input#search {
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: 1px solid gray;
+  border-radius: 4px;
+  height: 24px;
+  flex: 1 0;
+  margin: auto;
+}
+
+span.favorite {
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+span.favorite.active {
+  color: rgb(255, 0, 149);
+}
+
+span.favorite:hover {
+  color: rgb(187, 135, 255)
+}
+
+/* End template styling */
+
+
+
+/* Add your styles below */
+#home {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  place-items: center;
+}
+
+/* CATEGORIES CARDS STYLES START*/
+#categories {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+#categories>h1 {
+  color: rgb(198, 115, 247);
+}
+
+#categories .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 50px;
+  height: 100%;
+}
+
+#categories .category-card {
+  text-align: center;
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 2fr 2fr 1fr;
+  background-color: rgb(30, 4, 47);
+  border-radius: 5px;
+  border: 1px groove rgba(98, 98, 98, 0.618);
+}
+
+#categories .category-card>h1 {
+  color: rgb(187, 135, 255);
+}
+
+#categories.category-card>p {
+  margin-top: -5px;
+}
+
+#categories .details-btn {
+  width: 50%;
+  border: none;
+  margin-top: -30px;
+  margin-bottom: 25px;
+  background-color: rgb(0, 0, 0);
+  border: 1px groove rgba(207, 171, 254, 0.623);
+  border-radius: 5px;
+  color: rgb(207, 171, 254);
+  font-size: 15px;
+}
+
+#categories .category-card>button {
+  margin-left: 25%;
+}
+
+#categories .details-btn:hover {
+  border: 1px groove rgba(0, 0, 0);
+  background-color: rgb(207, 171, 254);
+  color: black;
+}
+
+/* CATEGORIES CARDS STYLES END*/
+
+/* MOVIE CARDS STYLES START */
+#movies .content {
+  padding: 5px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+#movies h1 {
+  margin-left: 30px;
+  color: rgb(198, 115, 247);
+}
+
+.movie-card {
+  margin: 5px;
+  background-color: black;
+  display: grid;
+  grid-template-rows: 130px 65px 1fr 30px;
+}
+
+.movie-card h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(198, 115, 247);
+}
+
+.movie-card h3 {
+  margin-top: -20px;
+  margin-bottom: 50px;
+}
+
+.movie-card-img {
+  margin-top: -50px;
+}
+
+.movie-card-img>img {
+  width: 85%;
+  height: 350px;
+}
+
+.movie-card-btns button {
+  background-color: black;
+  color: rgb(207, 171, 254);
+  border: 1px groove rgba(207, 171, 254, 0.661);
+}
+
+.movie-card-btns button:hover {
+  background-color: rgb(207, 171, 254);
+  color: black;
+  border: 1px groove rgba(207, 171, 254, 0.661);
+}
+
+.movie-details {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.movie-details h1 {
+  color: rgb(198, 115, 247);
+  margin-left: 20px;
+}
+
+.movie-detials-info {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.movie-details-img {
+  padding: 25px;
+  border-right: 2px solid rgba(175, 175, 175, 0.824);
+}
+
+.movie-details-about {
+  display: grid;
+  grid-template-rows: auto auto auto 4fr;
+  padding: 20px;
+  font-size: 20px;
+}
+/* MOVIE CARDS STYLES END */
+
+.about-content {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
